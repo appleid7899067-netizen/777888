@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "CodingFleet",
+      "hasCanvas": false,
+      "bodyTextLen": 3736,
+      "bodyTextHash": "403b5a76c4bb0a2503cca7354d0b922be529b4af5a092d29a4f0de7cba533002",
+      "bodyTextPrefix": "CodingFleet Tools Agents Models Pricing Docs 20 New chat 20+ LLM",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "CodingFleet",
+      "hasCanvas": false,
+      "bodyTextLen": 3727,
+      "bodyTextHash": "f5f0a99621cda32effe1aeb4d5fe0153b8c0619b29d84996d41eb5d6d8242ec7",
+      "bodyTextPrefix": "CodingFleet ToolsAgentsModelsPricingDocs 20New chat 20+ LLMs · P",
+      "horizontalOverflow": true,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

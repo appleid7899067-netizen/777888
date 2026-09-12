@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    @font-face {
+      font-family: "CF Sans";
+      src: url("file:///usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf") format("truetype");
+      font-weight: 700;
+      font-style: normal;
+    }
+    @font-face {
+      font-family: "CF Sans";
+      src: url("file:///usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf") format("truetype");
+      font-weight: 400;
+      font-style: normal;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #08090b;
+    }
+    .stage {
+      width: 1200px;
+      height: 630px;
+      position: relative;
+      background: #08090b;
+      font-family: "CF Sans", "Liberation Sans", sans-serif;
+    }
+    .bg {
+      position: absolute;
+      left: 50%;
+      top: 42%;
+      transform: translate(-50%, -50%);
+      width: 1280px;
+      height: auto;
+      opacity: 0.42;
+      filter: saturate(1.05) contrast(1.05);
+    }
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(236, 238, 241, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(236, 238, 241, 0.035) 1px, transparent 1px);
+      background-size: 40px 40px;
+      -webkit-mask-image: radial-gradient(ellipse 72% 62% at 50% 42%, #000 10%, transparent 72%);
+      mask-image: radial-gradient(ellipse 72% 62% at 50% 42%, #000 10%, transparent 72%);
+    }
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 55% 48% at 50% 36%, rgba(94, 200, 182, 0.12), transparent 62%),
+        linear-gradient(to bottom, rgba(8, 9, 11, 0.2) 0%, rgba(8, 9, 11, 0.55) 48%, rgba(8, 9, 11, 0.94) 72%, #08090b 86%);
+    }
+    .lockup {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 780px;
+    }
+    .mark {
+      width: 176px;
+      height: 92px;
+      margin: 0 auto 28px;
+      display: block;
+    }
+    .title {
+      color: #eceef1;
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: -0.035em;
+      line-height: 1;
+    }
+    .rule {
+      width: 48px;
+      height: 2px;
+      background: #5ec8b6;
+      margin: 22px auto 18px;
+      border-radius: 1px;
+      opacity: 0.9;
+    }
+    .sub {
+      color: #5ec8b6;
+      font-size: 22px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+    }
+  </style>
+</head>
+<body>
+  <div class="stage">
+    <img class="bg" src="./og-atmosphere.jpg" alt="" />
+    <div class="grid"></div>
+    <div class="vignette"></div>
+    <div class="lockup">
+      <svg class="mark" viewBox="0 0 88 48" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="2.2" result="b" />
+            <feMerge>
+              <feMergeNode in="b" />
+              <feMergeNode in="SourceGraphic" />
+            </feMerge>
+          </filter>
+        </defs>
+        <g filter="url(#glow)" fill="#5ec8b6">
+          <path opacity="0.38" d="M2 4 L22 24 L2 44 H12 L32 24 L12 4 Z" />
+          <path opacity="0.68" d="M28 4 L48 24 L28 44 H38 L58 24 L38 4 Z" />
+          <path d="M54 4 L74 24 L54 44 H64 L84 24 L64 4 Z" />
+        </g>
+      </svg>
+      <div class="title">CodingFleet</div>
+      <div class="rule"></div>
+      <div class="sub">AI-powered coding tools · parallel agents</div>
+    </div>
+  </div>
+</body>
+</html>
